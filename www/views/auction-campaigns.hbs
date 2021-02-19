@@ -1,0 +1,30 @@
+<!-- Content Row -->
+
+<div class="row">
+    {{#each page.campaigns}}
+    <div class="col-md-4">
+        <div class="card shadow mb-6">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">{{name}} ({{cam_id}})</h6>
+                <div>
+                </div>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body h6">
+
+                <img class="card-img" src="data:image/jpeg;base64,{{picture}}" style="margin-bottom: 0.75rem;"/>
+
+                age: from {{targetAgeLower}} to {{targetAgeUpper}}</br>
+                gender: {{getTargetGender targetGender}}<br/>
+                bid price: {{bidPrice}}<br/>
+
+                tags: {{getTags targetTags}} 
+                <div class="dropdown-divider"></div>
+
+            </div>
+        </div>
+    </div>
+    {{/each}}
+
+</div>

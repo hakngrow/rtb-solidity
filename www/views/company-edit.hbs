@@ -1,0 +1,53 @@
+<!-- Content Row -->
+<div class="container">
+    
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="p-5">
+                        <form id="frmCompany" name="frmCompany" method="post" action="/coys/update/{{page.company.coy_id}}" class="user">
+
+                            <div class="form-group row">
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control form-control-user" name="name"
+                                        placeholder="Name" value="{{page.company.name}}">
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control form-control-user" name="coyId"
+                                        placeholder="Company Id" value="{{page.company.coy_id}}" disabled>
+                                </div>
+                                
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control form-control-user" name="address"
+                                        placeholder="Wallet Address" value="{{page.company.address}}">
+                                </div>
+                                <div class="col-sm-2">
+                                    <select class="form-control" name="type" value="{{page.company.type}}">
+                                        <option value="A" {{#if (isAdvertiser page.company.type)}}selected{{/if}}>Advertiser</option>
+                                        <option value="P" {{#if (isPublisher page.company.type)}}selected{{/if}}>Publisher</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <hr/>
+                            <div class="form-group row">
+                                <div class="col-sm-8">
+                                    <input type="submit" value="Update Company" class="btn btn-primary btn-user btn-block"/>
+                                </div>
+                                <div class="col-sm-4">
+                                    <a href="/coys" class="btn btn-danger btn-user btn-block">
+                                        Cancel
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
