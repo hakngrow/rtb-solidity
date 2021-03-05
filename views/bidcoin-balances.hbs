@@ -1,0 +1,35 @@
+<!-- companies Content Row Start -->
+
+<div class="container-fluid">
+
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Coy Id</th>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Wallet Address</th>
+                            <th>Balance</th>
+                        </tr>
+                        {{#each page.companies}}
+                        <tr>
+                            <td>{{coy_id}}</td>
+                            <td>{{name}}</td>
+                            <td>{{getCompanyTypeLabel type}}</td>
+                            <td>{{address}}</td>
+                            <td>{{balance}}</td>
+                        </tr>
+                        {{/each}}
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- companies Content Row End -->
